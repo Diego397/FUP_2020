@@ -1,0 +1,24 @@
+algoritimo numeros impares
+variáveis:
+		cont, soma, media, desvio, resto : númerico
+		lista : vetor [50] de números
+início
+		cont <- 0;
+		soma <- 0;
+		enquanto cont < 50 faça
+		início		
+				leia lista[cont];
+				resto <- lista[cont] % 2;
+				se resto = 0 então
+						cont <- cont;
+				senão
+						cont <- cont + 1;
+						soma = soma + lista[cont];
+		fim
+		cont <- 0;
+		media <- soma / 50;
+		escreva media;
+		para cont <-0 até 50 faça
+				desvio <- desvio + (((lista[cont] - media) ^ 2)/49) ^ 1/2;
+		escreva desvio;
+fim

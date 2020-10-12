@@ -1,0 +1,7 @@
+algoritimo Sequencia de indices
+variáveis:
+i : numérico
+início
+		vetor <- [5,7,6,9,2,8,4,0,3]
+		para i <- 0 até 9 faça
+				escreva (i + 1) + vetor[i]

@@ -1,0 +1,197 @@
+algoritimo  Ordem Decrescente
+variáveis :
+	A, B, C, D: numérico;
+início
+	escreva "Entre o valor da primeira variavel";
+	leia A;
+	escreva "Entre o valor da segunda variavel";
+	leia B;
+	escreva "Entre o valor da terceira variavel";
+	leia C;
+	escreva "Entre o valor da quarta variavel";
+	leia D;
+ 	se A > B E A > C E A > D então
+ 	início
+ 		escreva A;
+ 		se B > C E B > D então
+ 		início
+ 			escreva B;
+ 			se C > D então
+ 			início	
+ 				escreva C;
+ 				escreva D;
+ 			fim
+ 			senão 
+ 			início	
+ 				escreva D;
+ 				escreva C;
+ 			fim
+ 		fim
+ 		se C > B E C > D então
+ 		início	
+ 			escreva C;
+ 			se B > D então
+ 			início
+ 				escreva B;
+ 				escreva D;
+ 			fim
+ 			senão 
+ 			início
+ 				escreva D;
+ 				escreva B;
+			fim 		
+ 		fim
+ 		se D > C E D > B então
+ 		início
+ 			escreva D;
+ 			se C > B então
+ 			início
+ 				escreva C;
+ 				escreva B;
+ 			fim
+ 			senão 
+ 			início
+ 				escreva B;
+ 				escreva C;
+ 			fim
+ 		fim
+ 	fim
+ 	se B > A E B > C E B > D então
+ 	início
+ 		escreva B;
+ 		se A > C E A > D então
+ 		início
+ 			escreva A;
+ 			se C > D então
+ 			início
+ 				escreva C;
+ 				escreva D;
+ 			fim
+ 			senão 
+ 			início
+ 				escreva D;
+ 				escreva C;
+ 			fim
+ 		fim
+ 		se C > A E C > D então
+ 		início
+ 			escreva C;
+ 			se A > D então
+ 			início
+ 				escreva A;
+ 				escreva D;
+ 			fim
+ 			senão 
+ 			início
+ 				escreva D;
+ 				escreva A;
+ 			fim
+ 		fim
+ 		se D > C E D > A então
+ 		início
+ 			escreva D;
+ 			se C > A então
+ 			início
+ 				escreva C;
+ 				escreva A;
+ 			fim
+ 			senão 
+ 			início
+ 				escreva A;
+ 				escreva C;
+ 			fim
+ 		fim
+ 	fim
+ 	se C > B E C > A E C > D então
+ 	início
+ 		escreva C;
+ 		se B > A E B > D então
+ 		início
+ 			escreva B;
+ 			se A > D então
+ 			início
+ 				escreva A;
+ 				escreva D;
+ 			fim
+ 			senão 
+ 			início
+ 				escreva D;
+ 				escreva A;
+ 			fim
+ 		fim
+ 		se A > B E A > D então
+ 		início
+ 			escreva A;
+ 			se B > D então
+ 			início
+ 				escreva B;
+ 				escreva D;
+ 			fim
+ 			senão 
+ 			início
+ 				escreva D;
+ 				escreva B;
+ 			fim
+ 		fim
+ 		se D > A E D > B então
+ 		início
+ 			escreva D;
+ 			se A > B então
+ 			início
+ 				escreva A;
+ 				escreva B;
+ 			fim
+ 			senão 
+ 			início
+ 				escreva B;
+ 				escreva A;
+ 			fim
+ 		fim
+ 	fim
+ 	senão
+ 	início
+ 		escreva D;
+ 		se B > C E B > A então
+ 		início
+ 			escreva B;
+ 			se C > A então
+ 			início
+ 				escreva C;
+ 				escreva A;
+ 			fim
+ 			senão 
+ 			início
+ 				escreva A;
+ 				escreva C;
+ 			fim
+ 		fim
+ 		se C > B E C > A então
+ 		início
+ 			escreva C;
+ 			se B > A então
+ 			início
+ 				escreva B;
+ 				escreva A;
+ 			fim
+ 			senão 
+ 			início
+ 				escreva A;
+ 				escreva B;
+ 			fim
+ 		fim
+ 		se A > C E A > B então
+ 		início
+ 			escreva A;
+ 			se C > B então 
+ 			início
+ 				escreva C;
+ 				escreva B;
+ 			fim
+ 			senão 
+ 			início
+ 				escreva B;
+ 				escreva C;
+ 			fim
+ 		fim
+ 	fim
+fim

@@ -1,0 +1,21 @@
+algoritimo mil primeiros
+variáveis : 
+		n1, n2, cont, cont2, resto3, resto7 : numérico;
+início
+		n1 <- 1;
+		cont <- 0;
+		cont2 <- 0;
+		enquanto cont = 0 faça
+		início
+				n1 <- n1 + 2;
+				resto3 <- n1 % 3;
+				resto7 <- n1 % 7;
+				se resto3 != 0 E resto7 != 0 então
+				início
+						escreva n1;
+						cont2 <- cont2 + 1;
+				fim
+				se cont2 = 1000 então
+						cont <- 1;
+		fim
+fim

@@ -1,0 +1,60 @@
+algoritimo permutação
+variáveis:
+		n1, n2, cont1, cont2, numc1, numc2 : númerico
+		listan1: vetor [10] de números
+		listan2: vetor [10] de números
+início
+		numc1 <- 0;
+		numc2 <- 0;
+		leia n1;
+		leia n2;
+		n3 <- n1;
+		n4 <- n2;
+//descobrindo o numero de casas de n1 e n2
+		enquanto n1 > 1 faça
+		início	
+				n1 = n1 / 10;
+				numc1 = numc1 + 1;
+		fim	
+		enquanto n2 > 1 faça
+		início
+				n2 = n2 / 10;
+				numc2 = numc2 + 1;
+		fim
+//criando uma lista com o os numeros decompostos de n1 e n2
+		para cont1 <- 0 até numc1 faça
+		início
+				listan1[cont1] = n1 % 10;
+				n1 = n1 // 10;
+		fim
+		para cont2 <- 0 até numc2 faça
+		início
+				listan2[cont2] = n2 % 10;
+				n2 = n2 // 10;
+		fim
+//comparar os numeros de compostos
+		para cont3 <- 0 até numc1 faça
+				para cont4 <- 0 até numc4 faça
+						se listan1[cont3] = listan2[cont4] então
+						início		
+								niguais[cont4] = listan1[cont3];
+								q = q + 1;
+						fim			
+//comparar resultados
+		se numc1 > numc2 então
+		início		
+				se numc2 <= q;
+				escreva n2 + " é permutação de " + n1;
+		fim
+		senão
+				se numc1 < numc2 então
+				início		
+						se numc1 <= q;
+						escreva n1 + " é permutação de " + n2;
+				fim
+				senão
+						se numc1 = numc2 E numc1 = q
+								escreva n1 + " é permutação de " + n2 + " e " + escreva n2 + " é permutação de " + n1;
+						senão 
+								escreva "Não são permutaveis";
+fim

@@ -1,0 +1,22 @@
+algoritimo Data valida ou nao
+variáveis :
+	dia, mes, ano : numérico;
+início
+	escreva "Digite o número referente ao Dia : ";
+	leia dia;
+	escreva "Digite o número referente ao Mês : ";
+	leia mes;
+	escreva "Difite o número referente ao Ano : ";
+	leia ano;
+	se 0 < dia E dia <= 31 E 0 < mes E mes <= 12 E 0 < ano então
+		se (mes == 1 OU mes == 3 OU mes == 5 OU mes == 7 OU mes == 8 OU mes == 10 OU mes == 12) E dia <= 31 então 
+			escreva "Essa data é Válida";
+		se mes == 2 E dia <= 28 então
+			escreva "Essa data é Válida";
+		se (mes == 4 OU mes == 6 OU mes == 9 OU mes == 11) E dia <= 30 então
+			escreva "Essa data é Válida";
+		senão 
+			escreva "Essa data é Inválida";
+	senão
+		escreva "Essa data é Inválida";
+fim

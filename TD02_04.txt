@@ -1,0 +1,38 @@
+algoritimo mmc
+variáveis :
+		n1, n2, cont, div, resto1, resto2, m : numérico;
+início
+		esccreva "Entre o Valor do Primeiro Número: ";
+		leia n1;
+		esccreva "Entre o Valor do Segundo Número: ";
+		leia n2;
+		cont <- 0;
+		div <- 2;
+		m <- 1;
+		enquanto cont = 0 faça
+		início
+				resto1 <- n1 % div;
+				resto2 <- n2 % div;
+				se resto1 = 0 OU resto2 = 0 então
+				início		
+						m <- m * resto2;
+						se resto1 = 0 E resto2 = 0 então
+						início
+								n1 <- n1 / div;
+								n2 <- n2 / div;
+						fim
+						senão
+								se resto1 = 0 então
+										n1 <- n1 / div;
+								senão
+										n2 <- n2 / div;
+				fim
+				senão
+				início
+						se n1 = 0 E n2 = 0 então
+								cont <- 1;
+						div <- div + 1;
+				fim
+		fim
+		escreva m;
+fim

@@ -1,0 +1,19 @@
+algoritimo fibonacci 1
+variáveis :
+		n, n1, n2, n3, cont: numérico;
+início
+		escreva "Entre o Valor de N: ";
+		leia n;
+		n1 <- 1;
+		n2 <- 1;
+		n3 <- 0;
+		cont <- 2;
+		escreva "0";
+		enquanto cont <= n faça
+		início
+				esvreva n2;
+				n2 <- n2 + n3;
+				n3 <- n1 ;
+				n1 <- n2;
+		fim
+fim

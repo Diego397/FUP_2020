@@ -1,0 +1,24 @@
+algoritimo Fundo de participação
+variáveis :	
+	pib, renda, habitantes, territorio, fpm: numérico;
+	nome : cadeia;
+início
+	escreva "Digite o PIB do País: ";
+	leia pib;
+	escreva "Digite o nome de uma cidade deste país: ";
+	leia nome;
+	escreva "Digite a renda per capita deste país em R$: ";
+	leia renda;
+	escreva "Digite o número de habitantes deste país: ";
+	leia habitantes;
+	escreva "Digite o tamanho do território deste país em km2: ";
+	leia territorio;
+	fpm = ((0.5/100) * pib);
+	se renda < 2000 E (habitantes <= 20000 OU territorio < 100000) então
+	início	
+		escreva nome;
+		escreva "FPM = R$", fpm;
+	fim
+	senão
+		escreva "O mesmo não teve direito a este fundo";
+fim

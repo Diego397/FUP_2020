@@ -1,0 +1,13 @@
+algoritimo n!
+variáveis :
+		n, cont : numérico;
+início
+		cont <- 1;
+		escreva("Entre o Valor de N: ");
+		leia n;
+		enquanto cont <= n faça
+				escreva cont;
+				cont <- cont + 1;
+		se n = 0 então 
+				escreva "1";
+fim

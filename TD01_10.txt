@@ -1,0 +1,38 @@
+algoritimo O maior dos 6
+variáveis :
+	a, b, c : númerico;
+início
+	escreva "Digite o primeiro número: ";
+	leia a;
+	escreva "Digite o segundo número: ";
+	leia b;
+	se a > b então
+		c <- a;
+	senão
+		c <- b;
+	escreva "Digite o terceiro número: ";
+	leia a;
+	se a > c então
+		a <- c;
+	senão 
+		c <- c;
+	escreva "Digite o quarto número: ";
+	leia a;
+	se a > c então
+		a <- c;
+	senão
+		c <- c;
+	escreva "Digite o quinto número: ";
+	leia a;	
+	se a > c então
+		a <- c;
+	senão 
+		c <- c;
+	escreva "Digite o sexto número: ";
+	leia a;
+	se a > c então
+		a <- c;
+	senão 
+		c <- c;
+	escreva "O maior número é: ", c;
+fim

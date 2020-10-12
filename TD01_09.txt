@@ -1,0 +1,31 @@
+algoritimo Imposto de Renda
+variáveis :
+	vbruto, inss, valor, imposto: númerico;
+início
+	escreva "Escreva o Valor Bruto recebido: ";
+	leia vbruto;
+	inss = 11/100 * vbruto;
+	valor = vbruto - inss;
+	se vbruto < 1903.98 então
+		escreva "ISENTO";
+	se vbruto >= 1903.98 E vbruto < 2826.65 então
+	início	
+		imposto = (7.5/100) * valor;
+		escreva "O valor do imposto é: ", imposto;
+	fim
+	se vbruto >= 2826.66 E vbruto < 3751.05 então
+	início	
+		imposto = (15/100) * valor;
+		escreva "O valor do imposto é: ", imposto;
+	fim
+	se vbruto >= 3751.06 E vbruto < 4664.68 então
+	início	
+		imposto = (22.5/100) * valor;
+		escreva "O valor do imposto é: ", imposto;
+	fim
+	se vbruto >= 4664.69 então
+	início	
+		imposto = (27.5/100) * valor;
+		escreva "O valor do imposto é: ", imposto;
+	fim
+fim	

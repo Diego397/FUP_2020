@@ -1,0 +1,25 @@
+algoritimo dosagem de medicamento 
+variáveis :
+	i, p : numérico;
+início
+	escreva "Digite a Idade do Paciente : ";
+	leia i;
+	escreva "Digite o Peso do Paciente em kg : ";
+	leia p;
+	se i >= 12 então 
+		se p >= 60 então 
+			escreva "O Paciente deve tomar 40 gotas por dose";
+		senão
+			escreva "O Paciente deve tomar 35 gotas por dose";
+	senão 
+		se 5 <= p E p <= 9 então
+			escreva "O Paciente deve tomar 5 gotas por dose";
+		se 9,1 <= p E p <= 16 então
+			escreva "O Paciente deve tomar 10 gotas por dose";
+		se 16,1 <= p E p <= 24 então
+			escreva "O Paciente deve tomar 15 gotas por dose";
+		se 24,1 <= p E p <= 30 então
+			escreva "O Paciente deve tomar 20 gotas por dose";
+		senão
+			escreva "O Paciente deve tomar 30 gotas por dose";
+fim

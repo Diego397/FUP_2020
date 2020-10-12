@@ -1,0 +1,25 @@
+algoritimo decimal para binario
+variáveis:
+		n, cont, resto, r : númerico
+		binario: vetor [16] de números
+início
+		cont <- -1;
+		leia n;
+		enquanto n > 2 faça
+		início
+				resto <- n % 2;
+				se resto = 0 faça
+						binario[cont] = 0;
+				senão
+						binario[cont] = 1;
+				n <- n // 2;
+				cont = cont -1;
+		fim		
+		se n = 1 então
+				binario[cont] <- 1;
+		senão
+				binario[cont - 1] <- 1
+		para cont2 <- 1 até 17 faça
+				r <- r + binario[-cont] * 10^(cont-1)
+		escreva r;
+fim

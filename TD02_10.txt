@@ -1,0 +1,27 @@
+algoritimo decomposicao
+variáveis :
+		n, n1, termo, num, resultado, resultado1, cont : numérico;
+início
+		escreva "Entre o Valor de N: ";
+		leia n;
+		n1 <- n;
+		cont <- -1;
+		resultado <- 10;
+		resultado1 <- 10;
+		enquanto resultado >= 1 faça
+		início
+				resultado <- n // 10;
+				cont <- cont + 1;
+				n <- resultado;
+		fim
+		enquanto resultado1 >= 1 faça
+		início
+				termo <- n1 % 10;
+				resultado1 <- n1 // 10;
+				n1 <- resultado1;
+				num = num + termo * (10**cont);
+				cont = cont - 1;
+		fim
+		escreva num;
+fim
+

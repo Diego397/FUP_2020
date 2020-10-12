@@ -1,0 +1,15 @@
+algoritimo tempo em anos
+variáveis :
+		hj, hp, tempo : numérico;
+início
+		hj <- 1.5;
+		hp <- 1.1;
+		tempo <- 0;
+				enquanto hp < hj faça
+				início	
+						hj = hj + 0.02;
+						hp = hp + 0.03;
+						tempo = tempo + 1;
+				fim
+		escreva tempo "anos";
+fim

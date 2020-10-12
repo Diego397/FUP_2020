@@ -1,0 +1,12 @@
+algoritimo ano bissexto
+variáveis :
+	ano, resto1, resto2 : númerico;
+início
+	escreva "Escreva o ano: ";
+	resto1 = ano % 4;
+	resto2 = ano % 100;
+	se resto1 == 0 E resto2 != 0 então
+		escreva "Esse é um ano bissexto";
+	senão 
+		escreva "Esse não é um ano bissexto";
+fim

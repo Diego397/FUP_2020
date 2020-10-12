@@ -1,0 +1,19 @@
+algoritimo empregado qualificado
+variáveis :
+	anon, anoi, codigo, idade, tempo : númerico;
+início
+	escreva "Digite o número do empregado: ";
+	leia codigo;
+	escreva "Digite o ano de seu nascimento: ";
+	leia anon;
+	escreva "Digite o ano de seu ingresso na empresa: ";
+	leia anoi;
+	idade = (2020 - anon);
+	tempo = (2020 - anoi);
+	escreva idade, "anos de idade";
+	escreva tempo, "anos trabalhando";
+	se idade >= 65 OU tempo >= 30 OU (idade >= 60 E tempo >= 25) então
+		escreva "Requerer aposentadoria";
+	senão
+		escreva "Não requerer";
+fim

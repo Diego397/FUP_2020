@@ -1,0 +1,19 @@
+algoritimo a soma dos outros dois
+variáveis :
+	A, B, C : númerico;
+início
+	escreva "Digite o Primeiro número";
+	leia A;
+	escreva "Digite o Segundo número";
+	leia B;
+	escreva "Digite o Terceiro número";
+	leia C;
+	se A + B == C então 
+		escreva C," representa a soma dos outros dois";
+	se A + C == B então
+		escreva B, " representa a soma dos outros dois";
+	se B + C == A então
+		escreva A, " representa a soma dos outros dois";
+	senão
+		escreva "Nenhum deles representa a soma dos outros dois";
+fim

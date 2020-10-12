@@ -1,0 +1,20 @@
+algoritimo IMC
+variáveis :
+	p, a, imc : numérico;
+início
+	escreva "Digite o Valor do Peso em kg: ";
+	leia p;
+	escreva "Digite o Valor da Altura em m: ";
+	leia a;
+	imc = (p / a^2);
+	se imc < 20 então
+		escreva "Abaixo do peso";
+	se 20 <= imc E imc < 25 então
+		escreva "Peso Normal";
+	se 25 <= imc E imc < 30 então
+		escreva "Sobre Peso";
+	se 30 <= imc E imc < 40 então
+		escreva "Obeso";
+	se 40 <= imc então	
+		escreva "Obeso Mórbido";
+fim

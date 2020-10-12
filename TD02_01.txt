@@ -1,0 +1,15 @@
+algoritimo soma de n
+variáveis : 
+		n, s, cont : numerérico;
+início
+		cont <- 0;
+		s <- 0; 
+		escreva "Entre o valor de N";
+		leia n;
+		enquanto cont <= n faça
+		início
+				cont <- cont + 1;
+				s <- s + cont;
+		fim
+		escreva s;
+fim

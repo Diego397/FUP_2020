@@ -1,0 +1,30 @@
+algoritimo mega sena
+variáveis :
+		n, acertou, cont, cont2, cont3, cont4 : númerico
+		cartela: vetor [n] de números
+		sorte: vetor [6] de números
+		certo: vetor [6] de números
+início
+		leia n;
+		acertou <- 0;
+		para cont <- 0 até n faça
+				leia cartela[cont];
+		para cont2 <- 0 até 6 faça
+				leia sorte[cont2];
+		para cont3 <- 0 até 6 faça
+				para cont4 <- 0 até n faça
+						se sorte[cont3] = cartela[cont4] então
+								acertou <- acertou + 1
+								certo[cont3] <- sorte[cont3]
+		escreva "Acertou " + acertou;
+		escreva certo;
+		se acertou = 6 então
+				escreva "Mega-Sena";
+		senão
+				se acertou = 5 então
+						escreva "Quinta";
+				senão
+						se acertou = 4 então
+								escreva	"Quarta";
+
+

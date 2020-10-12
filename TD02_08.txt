@@ -1,0 +1,28 @@
+algoritimo n termos
+variáveis :
+		n, n1, media, cont, s, maior, menor : numérico;
+início
+		cont <- 1;
+		escreva "Entre o Valor de N: ";
+		leia n;
+		escreva "Entre Outro Valor: ";
+				leia n1;
+		maior <- n1;
+		menor <- n1;
+		s <- n1;
+		enquanto cont < n faça
+		início		
+				escreva "Entre Outro Valor: ";
+				leia n1;
+				s = s + n1
+				se n1 > maior então
+						maior <- n1;
+				senão
+						se n1 < menor então
+								menor <- n1;
+		fim
+		media <- s / n 
+		escreva media
+		escreva maior
+		escreva menor
+fim

@@ -1,0 +1,51 @@
+algoritimo 100.000 valores distintos
+variáveis:
+		cont, cont2, cont3, cont4, cont5, r, n: númerico
+		vnum, vdis, vrepet: vetor [100000] de números
+		vdis: vetor [100000] de números
+		vnum: vetor [100000] de números
+início
+//Recebendo todos os números e criando uma lista com eles, parar se encontrar um numero negativo
+		cont <- 0;
+		enquanto cont <= 100000 faça
+		início	
+				leia n;
+				se n > 0 então
+						v[cont] <- n;
+				senão
+						cont <- 100000;
+				cont <- cont + 1;
+		fim
+//Criando uma lista somente com os números distintos
+		para cont2 <- 0 até 100000 faça
+		início		
+				cont3 <- 0;
+				enquanto cont3 < 100000 faça
+				início		
+						se cont2 != cont3 então
+						início		
+								se vnum[cont2] = vdis[cont3] então
+								início
+										vdis[cont2] = 0;
+										cont3 = 100000;
+								fim
+								senão
+										vdis[cont2] = vnum[cont2]
+						fim
+						cont3 = cont3 + 1;
+				fim
+		fim
+//Criando uma lista com o numero de vezes que cada numero se repete mantendo a pocição deles
+		para cont3 <- 0 até 100000 faça
+		início
+				para cont4 <- 0 até 100000 faça
+						se vnum[cont3] = vnum[cont4] então
+								r = r + 1;
+				vrepet[cont3] <- r;
+				r <- 0;
+		fim
+//escrever cada numero e quantas vezes ele se repete
+		para cont5 <- 0 até 100000 faça
+				se vdis[cont5] != 0 então
+						escreva "numero = " + vdis[cont5]
+						escreva "apareceu = " + vrepet[cont5]

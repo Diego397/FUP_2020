@@ -1,0 +1,14 @@
+algoritimo n termos
+variáveis :
+		num, div, s: numérico;
+início
+escreva "Entre o Valor de N: ";
+leia n;
+num <- 1;
+div <- 1;
+s <- 0 ;
+enquanto div <= n faça
+		s <- s + (num / div);
+		num <- num + 2;
+		div <- div + 1;
+escreva n;
