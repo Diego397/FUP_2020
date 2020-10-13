@@ -24,7 +24,7 @@ def testa_vitoria(x): #função que testa se o jogador da vez ganhou a partida, 
 	if diagonal1.count("O") == 3 or diagonal2.count("O") == 3:
 		return "O"
 	return " "
-def consegue_ganhar(x, y): #função que verifica se o jogador consegue ganhar, 
+def consegue_ganhar(x, y): #função que verifica se o jogador consegue ganhar
 	for i in range(3):
 		for j in range(3):
 			if x[i][j] in ["", " "]:
@@ -72,22 +72,24 @@ while True: #laço que para quando os jogadores não querem mais jogar
 			l = -1
 			tabela(m)
 			coords = (str(input("Vez do jogador {} = ".format(jogador))))
-			c = coords[0]
-			if len(coords) > 1: #se a entrada tiver tamanho maior que 1, l é a parte númerica da entrada
+			if len(coords) > 1: #se a entrada tiver tamanho maior que 1, l é a parte númerica da entrada e c é um caractere
 				l = "".join((ch if ch in "0123456789.-e" else "") for ch in coords)
 				l = (int(l) - 1)
+				c = "".join((s if s in "aAbBcC.-e" else "") for s in coords)
 			if c == "a" or c == "A": #converte c em números
 				c = 0
 			elif c == "b" or c == "B":
 				c = 1
 			elif c == "c" or c == "C":
 				c = 2
-			if (0 <= l <= 2) and (0 <= c <= 2) and m[l][c] == " ": #se l , c forem 0,1 ou 2 e o local escolhido não estiver preenchido a entrada é aceita
-				cont = cont + 1
+			else:
+				c = 9
+			if (0 <= l <= 2) and (0 <= c <= 2) and m[l][c] == " ": #se l , c forem 0, 1 ou 2 e o local escolhido não estiver preenchido a entrada é aceita
+				cont = cont + 10
 				m[l][c] = simbolo
 				break
 			else:
-				print("Entrada invalida")
+				print("Entrada invalida")		
 		flag = 0 #bandeira para saber se o jogador venceu
 		if (ja_perdeu(m,simboloadv) and consegue_ganhar(m,simbolo)) or testa_vitoria(m) == simbolo: #se o adversario já perdeu a partida e o jogador da vez conseguir ganhar ou o jogador da vez ganhar, o jogador da vez ganha
 			if testa_vitoria(m) == simbolo:
