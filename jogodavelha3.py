@@ -68,25 +68,26 @@ while True: #laço que para quando os jogadores não querem mais jogar
 			simbolo = simbolo1
 			jogadoradv = 2
 			simboloadv = simbolo2
-		while True:
-			l = -1
+		while True: #laço para receber as coordenadas do lugar onde o jogador escolher, ele só recebe quando a entrada for válida
 			tabela(m)
 			coords = (str(input("Vez do jogador {} = ".format(jogador))))
-			if len(coords) > 1: #se a entrada tiver tamanho maior que 1, l é a parte númerica da entrada e c é um caractere
-				l = "".join((ch if ch in "0123456789.-e" else "") for ch in coords)
-				c = "".join((s if s in "aAbBcC.-e" else "")for s in coords)
+			l = "".join((ch if ch in "123.-e" else "") for ch in coords)	#l é a parte númerica das coordenadas, só é validada para l = 1, 2 ou 3
+			c = "".join((s if s in "aAbBcC.-e" else "")for s in coords)	#c é o caractere das coordenadas, só é validada para c = a, A, b, B, c ou C
+			if l == "1" or l == "2" or l == "3":
 				l = (int(l) - 1)
-			if c == "a" or c == "A": #converte c em números, se c não estiver em "aAbBcC", c = 3 e fica fora do intervalo requerido
+			else:
+				l = 9
+			if c == "a" or c == "A":
 				c = 0
 			elif c == "b" or c == "B":
 				c = 1
 			elif c == "c" or c == "C":
 				c = 2
 			else:
-				c = 3
-			if (0 <= l <= 2) and (0 <= c <= 2) and m[l][c] == " ": #se l , c forem 0, 1 ou 2 e o local escolhido não estiver preenchido a entrada é aceita
-				cont = cont + 1
+				c = 9
+			if 0 <= l <= 2 and 0 <= c <= 2 and m[l][c] == " ": #se l e c estiverem dentro do intervalo aceito e a coordenada escolhida não estiver preenchida, a coordenada é validada e registrada
 				m[l][c] = simbolo
+				cont = cont + 1 #contador de jogadas validas
 				break
 			else:
 				print("Entrada invalida")
